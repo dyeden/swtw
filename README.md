@@ -1,2 +1,2 @@
 # swtw
-This great system helps everyone to the burn down zero
+This great system helps everyone to reach the burn down zero
