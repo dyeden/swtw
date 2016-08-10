@@ -5,8 +5,8 @@ import datetime
 
 
 # inserir as credenciais
-TW_KEY = 'desk380viper'
-USER_ID = 155031
+TW_KEY = 'dddddddd'
+USER_ID = 111111111
 
 instance = teamwork.Teamwork('terras.teamwork.com', TW_KEY)
 
