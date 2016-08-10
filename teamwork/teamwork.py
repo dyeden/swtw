@@ -103,7 +103,7 @@ class Teamwork(object):
                         "isbillable": "1"
                     }
                 }
-        print json.dumps(data)
+
         result = self.post(
             '/projects/%i/time_entries.json' % project_id,
             data=json.dumps(data))
