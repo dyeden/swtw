@@ -100,13 +100,18 @@ class Teamwork(object):
                         "time": time_to_hhmm(start_time),
                         "hours": duration_hours,
                         "minutes": duration_minutes,
-                        "isbillable": "1"
+                        "isbillable": True,
+                        "has-start-time" : True,
                     }
                 }
 
+        print data
+        print json.dumps(data)
+        datafake = '{"time-entry": {"hours": 4, "description": "Inser\u00e7\u00e3o do servi\u00e7o na AWS", "time": "9:00", "date": "20160801", "minutes": 0, "isbillable": true, "person-id": 155031, "has-start-time": true}}'
         result = self.post(
             '/projects/%i/time_entries.json' % project_id,
             data=json.dumps(data))
+
 
         return result
 
@@ -132,7 +137,14 @@ def timedelta_to_hours_minutes(td):
 
 
 def time_to_hhmm(time_input):
-    return '%i:%i' % (time_input.hour, time_input.minute)
+    if time_input.minute < 10:
+        str_min = "0" + str(time_input.minute)
+    else:
+        str_min = str(time_input.minute)
+
+    return str(time_input.hour) + ":" + str_min
+
+    # return '%i:%i' % (time_input.hour, time_input.minute)
 
 
 class User(object):
