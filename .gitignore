@@ -7,6 +7,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+dados_sw/data.json
+
 .Python
 env/
 build/

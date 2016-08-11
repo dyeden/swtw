@@ -106,8 +106,6 @@ class Teamwork(object):
                 }
 
         print data
-        print json.dumps(data)
-        datafake = '{"time-entry": {"hours": 4, "description": "Inser\u00e7\u00e3o do servi\u00e7o na AWS", "time": "9:00", "date": "20160801", "minutes": 0, "isbillable": true, "person-id": 155031, "has-start-time": true}}'
         result = self.post(
             '/projects/%i/time_entries.json' % project_id,
             data=json.dumps(data))
@@ -143,8 +141,6 @@ def time_to_hhmm(time_input):
         str_min = str(time_input.minute)
 
     return str(time_input.hour) + ":" + str_min
-
-    # return '%i:%i' % (time_input.hour, time_input.minute)
 
 
 class User(object):

@@ -25,10 +25,10 @@ _**onde pegar os dados do teamwork para o main.py**_
 
 projectid:
 
-pode ser pego na url ao clicar no projeto, por exemplo o project id do terras é 222976
+pode ser pego na url ao clicar no projeto, por exemplo o project id 22222 fica
 localizado entre projects e overview no link:
 
-https://terras.teamwork.com/projects/222976/overview
+https://<empresa>.teamwork.com/projects/22222/overview
 
 
 apitoken:

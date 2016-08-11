@@ -30,7 +30,6 @@ class exportarsw(object):
             datesw = tarefa['Date'].split("/")
             usedtime = tarefa['Used time']
 
-
             duration = datetime.timedelta(hours=usedtime)
 
             if dia != int(datesw[0]) or month != int(datesw[1]):
@@ -44,6 +43,7 @@ class exportarsw(object):
                 almoco = False
 
             else:
+
                 #adicionar a hora do almoco
                 if start_time.hour > 12 and almoco == False:
                     start_time = start_time + datetime.timedelta(hours=1)
@@ -56,6 +56,3 @@ class exportarsw(object):
 
     def run(self):
         self.inserir_hora(self.projectid, self.pathjson)
-
-
-# inserir_hora(221896, "/home/dyeden/ProjetosPython/teamwork_api/swtw/dados_sw/data.json")
