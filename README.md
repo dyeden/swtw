@@ -37,4 +37,4 @@ ao clicar na foto do perfil aparecerá a opção "Edite meus detalhes" clique ne
 
 userid:
 
-vá no seu perfil o número deverá aprecer no final da url
+vá no seu perfil o número deverá aparecer no final da url
